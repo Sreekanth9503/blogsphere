@@ -3,7 +3,6 @@ import { CgProfile } from "react-icons/cg";
 import { Link, useParams } from "react-router";
 
 const AdminNavbar = () => {
-    const { author } = useParams(); 
 
     return (
         <nav className="navbar navbar-dark navbar-expand-lg bg-black shadow-sm">
