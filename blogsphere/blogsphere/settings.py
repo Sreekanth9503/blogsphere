@@ -18,9 +18,10 @@ REACT_BUILD_DIR = BASE_DIR.parent / "blogapp" / "build"
 # --------------------------------------------------
 SECRET_KEY = 'django-insecure-)+!@sxw9=r%)2v&*707nf*ir!5jkz5zd!+$nk*81_h5i=a417&'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
 
 # --------------------------------------------------
 # APPLICATIONS
@@ -59,7 +60,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 # --------------------------------------------------
 # URLS
 # --------------------------------------------------
-ROOT_URLCONF = "blogsphere.blogsphere.urls"
+ROOT_URLCONF = "blogsphere.urls"
 
 # --------------------------------------------------
 # TEMPLATES (React index.html)
@@ -83,7 +84,8 @@ TEMPLATES = [
 # --------------------------------------------------
 # WSGI
 # --------------------------------------------------
-WSGI_APPLICATION = "blogsphere.blogsphere.wsgi.application"
+WSGI_APPLICATION = 'blogsphere.wsgi.application'
+
 
 # --------------------------------------------------
 # DATABASE (UNCHANGED)
@@ -91,16 +93,17 @@ WSGI_APPLICATION = "blogsphere.blogsphere.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": os.environ.get("MYSQLDATABASE"),
-        "USER": os.environ.get("MYSQLUSER"),
-        "PASSWORD": os.environ.get("MYSQLPASSWORD"),
-        "HOST": os.environ.get("MYSQLHOST"),
-        "PORT": os.environ.get("MYSQLPORT", "3306"),
+        "NAME": os.environ.get("DB_NAME"),
+        "USER": os.environ.get("DB_USER"),
+        "PASSWORD": os.environ.get("DB_PASSWORD"),
+        "HOST": os.environ.get("DB_HOST"),
+        "PORT": os.environ.get("DB_PORT", "3306"),
         "OPTIONS": {
             "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
 }
+
 
 
 
