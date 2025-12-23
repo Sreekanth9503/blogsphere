@@ -59,7 +59,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 # --------------------------------------------------
 # URLS
 # --------------------------------------------------
-ROOT_URLCONF = 'blogsphere.urls'
+ROOT_URLCONF = "blogsphere.blogsphere.urls"
 
 # --------------------------------------------------
 # TEMPLATES (React index.html)
@@ -83,7 +83,7 @@ TEMPLATES = [
 # --------------------------------------------------
 # WSGI
 # --------------------------------------------------
-WSGI_APPLICATION = 'blogsphere.wsgi.application'
+WSGI_APPLICATION = "blogsphere.blogsphere.wsgi.application"
 
 # --------------------------------------------------
 # DATABASE (UNCHANGED)
