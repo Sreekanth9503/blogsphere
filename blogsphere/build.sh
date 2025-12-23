@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 set -o errexit
 
-echo "Installing backend dependencies"
-pip install -r blogsphere/requirements.txt
+echo "PWD:"
+pwd
+echo "FILES:"
+ls -la
 
-echo "Building React frontend"
-cd blogapp
-npm install
-npm run build
-cd ..
+pip install -r requirements.txt
 
-echo "Running Django collectstatic and migrate"
-cd blogsphere
 python manage.py collectstatic --noinput
 python manage.py migrate
