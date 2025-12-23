@@ -1,6 +1,6 @@
 import React from "react";
 import { CgProfile } from "react-icons/cg";
-import { Link, useParams } from "react-router";
+import { Link } from "react-router";
 
 const AdminNavbar = () => {
 
